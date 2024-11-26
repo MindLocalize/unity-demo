@@ -22,8 +22,8 @@ public class iLocalizeAndroidCore : IiLocalizeCore
             this.preparedCallback = callback;
         }     
 
-        void onDataRetrieved(bool isSuccess) {
-            preparedCallback(isSuccess);
+        void onDataRetrieved(bool isSuccess, string message) {
+            preparedCallback(isSuccess, message);
         }
 
     }

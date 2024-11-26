@@ -5,7 +5,7 @@
 //  Copyright © 2020 AIHelp. All rights reserved.
 //
 
-#import <iLocalize.h>
+#import <MindLocalizeSDK/iLocalize.h>
 
 #ifndef Go2GlobalUnity_h
 #define Go2GlobalUnity_h
@@ -23,6 +23,8 @@ extern "C" void unity_updateLanguage(const char* language);
 extern "C" void unity_setLogEnable(bool enable);
 
 extern "C" void unity_evaluateString(const char* code, const char* stringContent);
+
+extern "C" void unity_enableEvaluateFunction(bool enable);
 
 extern "C" void unity_updateUserInfo_g2g(const char* userId, const char* userTags);
 

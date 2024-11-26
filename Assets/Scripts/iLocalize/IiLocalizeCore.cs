@@ -2,7 +2,7 @@
 public class iLocalizeDefine
 {
 
-    public delegate void OnTranslationPreparedCallback(bool isSuccess);
+    public delegate void OnTranslationPreparedCallback(bool isSuccess, string message);
 
 }
 

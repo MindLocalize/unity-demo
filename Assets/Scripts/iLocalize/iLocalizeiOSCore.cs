@@ -14,13 +14,13 @@ public class iLocalizeiOSCore : IiLocalizeCore
     [DllImport("__Internal")]
     private static extern void unity_initBuild(string appKey, string language, bool isInternationalizing, bool isBuildDebug);
 
-    public delegate void iOSOnTranslationPrepared(bool isSuccess);
+    public delegate void iOSOnTranslationPrepared(bool isSuccess, string message);
     [MonoPInvokeCallback(typeof(iOSOnTranslationPrepared))]
-    private static void iOSInitCallback(bool isSuccess)
+    private static void iOSInitCallback(bool isSuccess, string message)
     {
         if (_iOSInitCallback != null)
         {
-            _iOSInitCallback(isSuccess);
+            _iOSInitCallback(isSuccess, message);
 
         }
     }
